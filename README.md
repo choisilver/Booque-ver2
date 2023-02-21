@@ -32,15 +32,42 @@
 
 ---
 부끄장터의 경우 지도api와 사진 여러장 저장을 제외하고 기본 CRUD 방식을 사용함.
-많은 기능들을 Ajax를 이용한 비동기 방식을 선택함.
+
 부끄채팅의 경우 WebSocket 연결을 위한 WebSocketMessageBrokerConfigurer 인터페이스를 상속함(implements)
+
+  #### 아쉬웠던 점
+  - 기존 계획이었던 서버배포와 Python을 이용한 책 추천 알고리즘 기능을 아예 구현하지 못함. 
+      - 시간적 여유가 있었음에도 제대로 구상, 계획조차 세우지 않은 것이 아쉬움. 
+  #### 배운 점
+- ㅎㅎ 반복된 오류는 팀원들에게 전달해서 동일한 오류가 발생시 빠르게 해결할 수 있음.
+  - DB의 Fk가 없으면 데이터 문제로 오류가 발생 했을 때 한번에 파악하기 어려웠음.
+ - 코드의 재사용율을 높이기 위해서는 서로의 코드를 정확하게 알고 있어야 함. 하지만 어려움.
+  - ajax와 File 객체에 대해 이해 할 수 있었음.?
+  
+  
+  
   
  ---
- ## Ajax 방식이란?
-  가장 많이 사용한 ajax 방식은 무엇일까?
+ ## REST API & Ajax 방식이란?
+#### Ajax(Asysnchronous JavaScript And XML)
+  - 요청과 응답이 비동기적으로 이루어지니는 통신 방식
+  - 클라이언트는 서버에게 요청을 보내고, 응답을 기다리지 않고 다른 작업을 처리 후에 응답을 받았을 때 그에 대한 처리를 함. 
+  #### REST(Representational State Transfer)
+  - HTTP URL과 방식(post, get 등 )을 통해서 서버로부터 데이터를 전송 받을 수 있는 방식
+  
+  ### Ajax를 이용하여 REST API를 호출.
+  
+  HttpEntity, ResponsEntity , RepuestEntity 등의 클래스를 이용함. 
+  HTTP는 여전히 뭔지 모르겠음.
+  
+  
   
   
  ## WebSocket과 SockJS, Stom은 무엇일까?
+  
+  socket은 양방향 통신/소통을 할때 음성/텍스트/이미지 등의 데이터가 전송되는 도착지점임. 
+  예를 을어 포트 넘버나 URL같은 경로가 socket이 되어 TCP(Transmission Control Protocol)가 전달하는 데이터를 알맞게 인지하도록 해줌..?
+  
 
 
 

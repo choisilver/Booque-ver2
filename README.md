@@ -23,7 +23,17 @@
 
 ---
 ## 부끄 채팅 
-1. 중고 판매글의 채팅하기 버튼을 통해서 WebSocket이 실행됨.
-2. 
+1. 중고 판매글의 채팅하기 버튼을 통해서 글번호, 채팅을 건 유저 번호, 판매자 번호 총 3가지 데이터가 Chat DB에 ajax로 비동기 방식으로 생성
+2. 생성된 Chat DB의 Pk를 chatRoomId를 return 받아 chat?chatRoomId=1 식으로 채팅방 생성 
+3. 전체 채팅 리스트에서 onclick 방식으로 (또는 <a> 방식) chatRoomId를 통해 데이터 받음
+4. SockJS,Stom 을 통해 발송한 메시지를 txt파일에 내용/작성자/시간 3가지를 저장함. 
+5. Javascript의 input.value.toUpperCase(); 통해 전체 채팅창에서 검색 기능.
+6. 판매자일 경우 판매, 예약, 판매완료 를 선택 할 수 있는 버튼 생성. 비동기 방식으로 바로 데이터가 변경됨.
+
+---
+부끄장터의 경우 지도api와 사진 여러장 저장을 제외하고 기본 CRUD 방식을 사용함.
+많은 기능들을 Ajax를 이용한 비동기 방식을 선택함.
+부끄채팅의 경우 WebSocket 연결을 위한 WebSocketMessageBrokerConfigurer 인터페이스를 상속함(implements)
+
 
 

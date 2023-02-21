@@ -34,6 +34,13 @@
 부끄장터의 경우 지도api와 사진 여러장 저장을 제외하고 기본 CRUD 방식을 사용함.
 많은 기능들을 Ajax를 이용한 비동기 방식을 선택함.
 부끄채팅의 경우 WebSocket 연결을 위한 WebSocketMessageBrokerConfigurer 인터페이스를 상속함(implements)
+  
+ ---
+ ## Ajax 방식이란?
+  가장 많이 사용한 ajax 방식은 무엇일까?
+  
+  
+ ## WebSocket과 SockJS, Stom은 무엇일까?
 
 
 
